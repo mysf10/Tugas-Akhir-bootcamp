@@ -1,0 +1,445 @@
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* css reset */
+
+/* styling */
+body {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #daddb1;
+  color: #000;
+}
+
+header,
+main,
+aside,
+footer {
+  width: 100vw;
+}
+
+/* header */
+header {
+  height: 100px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  background-color: #b3a492;
+  order: 1;
+}
+
+header h1 {
+  font-size: 9vw;
+  font-weight: bold;
+  text-shadow: 0px 0px 9px #ffffff;
+}
+/* header */
+/* main */
+main {
+  order: 3;
+  position: relative;
+}
+main h3 {
+  font-size: 4vw;
+  margin: 50px 0 20px 10px;
+  text-shadow: 0px 0px 5px #5d3c14;
+  position: relative;
+}
+main .populer,
+main .rating,
+main .new {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* background-color: #d6c7ae; */
+  padding-top: 10px;
+  position: relative;
+}
+
+.buku {
+  width: 30%;
+  margin-bottom: 10px;
+  border: 5px solid #b3a492;
+  height: 350px;
+  overflow: hidden;
+  transition: 400ms;
+  position: relative;
+}
+.buku img {
+  width: 100%;
+}
+main .desc {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  flex-wrap: wrap;
+  transition: 400ms;
+  position: absolute;
+}
+main .desc .p1 {
+  text-align: center;
+  font-size: calc(1vw + 7px);
+  font-weight: bold;
+  margin: 5px;
+}
+main .desc .p2 {
+  text-align: center;
+  font-size: calc(1vw + 9px);
+  padding: 0 5px 0 5px;
+}
+main .buku .btnRead {
+  position: absolute;
+  padding: 5px 0 5px 0;
+  background-color: #5d3c14;
+  color: #fff;
+  opacity: 0;
+  transition: 2s;
+  font-size: 3vw;
+}
+main .buku:hover {
+  box-shadow: 0px 0px 10px 5px #5d3c14;
+  height: 400px;
+}
+main .buku:hover .desc {
+  background-color: #daddb1ac;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+main .buku:hover .btnRead {
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+/* main */
+/* aside */
+aside {
+  order: 2;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  position: relative;
+}
+aside h3 {
+  font-size: calc(3vw + 9px);
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  text-shadow: 0px 0px 5px #5d3c14;
+}
+aside .ptw {
+  width: 100%;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+aside img {
+  width: 50%;
+  border-top: 5px solid #b3a492;
+  border-right: 5px solid #b3a492;
+  border-left: 5px solid #b3a492;
+}
+aside .desc {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+  /* background-color: #d6c7ae; */
+  border-bottom: 5px solid #b3a492;
+  border-right: 5px solid #b3a492;
+  border-left: 5px solid #b3a492;
+}
+aside .desc .p1 {
+  text-align: center;
+  font-size: calc(2vw + 5px);
+  font-weight: bold;
+  margin: 10px;
+}
+aside .desc .p2 {
+  text-align: center;
+  font-size: calc(2vw + 6px);
+}
+/* aside */
+/* footer */
+footer {
+  margin-top: 20px;
+  order: 4;
+  background-color: #b3a492;
+  height: 50px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+/* footer */
+/* styling */
+
+/* animation */
+@keyframes bookDesc {
+  0% {
+  }
+  100% {
+    background-color: #d6c7aec0;
+    top: 0;
+    left: 0;
+  }
+}
+/* animation */
+
+/* breakpoint */
+@media (min-width: 530px) {
+  /* header */
+  header h1 {
+    font-size: 5vw;
+  }
+  /* header */
+
+  /* main */
+  .buku {
+    height: 400px;
+  }
+  main h3 {
+    font-size: calc(3vw + 8px);
+    margin-left: 15px;
+  }
+  main .desc .p1 {
+    font-size: calc(1vw + 7px);
+  }
+  main .desc .p2 {
+    font-size: calc(1vmax + 7px);
+  }
+
+  main .buku:hover {
+    box-shadow: 0px 0px 10px 5px #5d3c14;
+    height: 500px;
+  }
+  main .buku:hover .desc {
+    height: 100%;
+  }
+  main .buku .btnRead {
+    font-size: calc(1vmax + 7px);
+  }
+  /* main */
+  /* aside */
+  aside h3 {
+    font-size: calc(3vw + 8px);
+  }
+  aside .desc .p1 {
+    font-size: calc(1vw + 9px);
+  }
+  aside .desc .p2 {
+    font-size: calc(1vw + 9px);
+  }
+  /* aside */
+}
+
+@media (min-width: 1024px) {
+  body {
+    justify-content: center;
+  }
+  /* header */
+  header h1 {
+    font-size: 4vw;
+  }
+  /* header */
+
+  /*main */
+  main {
+    width: 65vw;
+    order: 2;
+    border: 5px solid #b3a492;
+    box-sizing: border-box;
+    top: 50px;
+    box-shadow: -5px 0 10px 5px #000;
+    margin-bottom: 100px;
+  }
+  main h3 {
+    font-size: calc(1vw + 10px);
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .buku {
+    height: 400px;
+    width: 22%;
+  }
+
+  main .desc .p1 {
+    font-size: calc(1vw + 5px);
+  }
+  main .desc .p2 {
+    font-size: calc(1vw + 5px);
+  }
+  main .buku:hover {
+    box-shadow: 0px 0px 10px 5px #5d3c14;
+    height: 550px;
+  }
+  main .buku:hover .desc {
+    height: 100%;
+  }
+  main .buku .btnRead {
+    font-size: calc(1vmax + 7px);
+  }
+  /*main */
+  /* aside */
+  aside {
+    width: 30vw;
+    order: 3;
+    align-self: start;
+    box-shadow: 5px 0 10px 5px #000;
+    border-right: 5px solid #b3a492;
+    border-top: 5px solid #b3a492;
+    border-bottom: 5px solid #b3a492;
+    box-sizing: border-box;
+    top: 50px;
+  }
+  aside h3 {
+    font-size: calc(1vw + 8px);
+  }
+  aside .desc,
+  aside img {
+    width: 80%;
+  }
+  aside .desc .p1 {
+    font-size: calc(1vw + 5px);
+  }
+  aside .desc .p2 {
+    font-size: calc(1vw + 5px);
+  }
+  /* aside */
+}
+/* breakpoint */
