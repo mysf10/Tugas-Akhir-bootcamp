@@ -135,7 +135,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #daddb1;
+  background-color: #fff;
   color: #000;
 }
 
@@ -152,14 +152,20 @@ header {
   display: flex;
   place-content: center;
   place-items: center;
-  background-color: #b3a492;
+  background-color: #fff;
   order: 1;
 }
-
+header .icon {
+  border: 0px solid transparent;
+  background-color: #9dbdba;
+  border-radius: 50%;
+}
 header h1 {
   font-size: 9vw;
   font-weight: bold;
-  text-shadow: 0px 0px 9px #ffffff;
+  text-shadow: 0px 0px 9px #fff;
+  padding: 1vh;
+  color: #000;
 }
 /* header */
 /* main */
@@ -169,9 +175,14 @@ main {
 }
 main h3 {
   font-size: 4vw;
-  margin: 50px 0 20px 10px;
-  text-shadow: 0px 0px 5px #5d3c14;
+  margin: 50px 0 0px 0px;
+  padding: 10px;
+  background-color: #9dbdba;
+  font-weight: bold;
+  text-shadow: 0px 0px 9px #ffffff;
   position: relative;
+  color: #000;
+  border: 2px solid transparent;
 }
 main .populer,
 main .rating,
@@ -184,16 +195,16 @@ main .new {
   position: relative;
 }
 
-.buku {
+main .buku {
   width: 30%;
   margin-bottom: 10px;
-  border: 5px solid #b3a492;
+  border: 5px solid #9dbdba;
   height: 350px;
   overflow: hidden;
   transition: 400ms;
   position: relative;
 }
-.buku img {
+main .buku img {
   width: 100%;
 }
 main .desc {
@@ -218,30 +229,37 @@ main .desc .p2 {
 main .buku .btnRead {
   position: absolute;
   padding: 5px 0 5px 0;
-  background-color: #5d3c14;
+  background-color: #9dbdba;
+  border: 2px solid transparent;
   color: #fff;
   opacity: 0;
   transition: 2s;
   font-size: 3vw;
 }
 main .buku:hover {
-  box-shadow: 0px 0px 10px 5px #5d3c14;
+  box-shadow: 0px 0px 10px 5px #9dbdba;
   height: 400px;
 }
 main .buku:hover .desc {
-  background-color: #daddb1ac;
+  background-color: #9dbdbab5;
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  bottom: 0;
 }
-
+main .buku:hover .p2,
+main .buku:hover .p1 {
+  text-shadow: 0px 0px 9px #000;
+  color: #fff;
+  font-size: calc(1vw + 8px);
+}
 main .buku:hover .btnRead {
   z-index: 99;
   bottom: 0;
   left: 0;
   right: 0;
   opacity: 1;
+  text-shadow: 0px 0px 9px #000;
 }
 /* main */
 /* aside */
@@ -260,7 +278,13 @@ aside h3 {
   padding: 10px;
   text-align: center;
   width: 100%;
-  text-shadow: 0px 0px 5px #5d3c14;
+  border: 0px solid transparent;
+  background-color: #9dbdba;
+  font-weight: bold;
+  text-shadow: 0px 0px 9px #ffffff;
+  position: relative;
+  color: #000;
+  margin-bottom: 10px;
 }
 aside .ptw {
   width: 100%;
@@ -270,9 +294,9 @@ aside .ptw {
 }
 aside img {
   width: 50%;
-  border-top: 5px solid #b3a492;
-  border-right: 5px solid #b3a492;
-  border-left: 5px solid #b3a492;
+  border-top: 5px solid #9dbdba;
+  border-right: 5px solid #9dbdba;
+  border-left: 5px solid #9dbdba;
 }
 aside .desc {
   display: flex;
@@ -281,9 +305,9 @@ aside .desc {
   flex-wrap: wrap;
   width: 50%;
   /* background-color: #d6c7ae; */
-  border-bottom: 5px solid #b3a492;
-  border-right: 5px solid #b3a492;
-  border-left: 5px solid #b3a492;
+  border-bottom: 5px solid #9dbdba;
+  border-right: 5px solid #9dbdba;
+  border-left: 5px solid #9dbdba;
 }
 aside .desc .p1 {
   text-align: center;
@@ -300,11 +324,15 @@ aside .desc .p2 {
 footer {
   margin-top: 20px;
   order: 4;
-  background-color: #b3a492;
-  height: 50px;
+  background-color: #9dbdba;
+  height: 100px;
   display: flex;
   place-content: center;
   place-items: center;
+}
+footer h2 {
+  color: #000;
+  font-size: 4vw;
 }
 /* footer */
 /* styling */
@@ -330,12 +358,12 @@ footer {
   /* header */
 
   /* main */
-  .buku {
+  main .buku {
     height: 400px;
   }
   main h3 {
     font-size: calc(3vw + 8px);
-    margin-left: 15px;
+    padding-left: 15px;
   }
   main .desc .p1 {
     font-size: calc(1vw + 7px);
@@ -345,11 +373,13 @@ footer {
   }
 
   main .buku:hover {
-    box-shadow: 0px 0px 10px 5px #5d3c14;
     height: 500px;
   }
   main .buku:hover .desc {
     height: 100%;
+  }
+  main .buku:hover .p1, main .buku:hover .p2 {
+    font-size: calc(1vmax + 10px);
   }
   main .buku .btnRead {
     font-size: calc(1vmax + 7px);
@@ -366,13 +396,21 @@ footer {
     font-size: calc(1vw + 9px);
   }
   /* aside */
+  /* footer */
+  footer h2 {
+    font-size: calc(1vw + 13px);
+  }
+  /* footer */
 }
 
 @media (min-width: 1024px) {
   body {
-    justify-content: center;
+    justify-content:space-evenly;
   }
   /* header */
+  header {
+    margin-top: 30px;
+  }
   header h1 {
     font-size: 4vw;
   }
@@ -382,18 +420,19 @@ footer {
   main {
     width: 65vw;
     order: 2;
-    border: 5px solid #b3a492;
+    /* border: 5px solid #b3a492; */
     box-sizing: border-box;
     top: 50px;
-    box-shadow: -5px 0 10px 5px #000;
+    box-shadow: 0px 0 10px 2px #000;
     margin-bottom: 100px;
   }
   main h3 {
     font-size: calc(1vw + 10px);
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 0;
+    padding: 7px;
   }
-  .buku {
+  main .buku {
     height: 400px;
     width: 22%;
   }
@@ -405,7 +444,7 @@ footer {
     font-size: calc(1vw + 5px);
   }
   main .buku:hover {
-    box-shadow: 0px 0px 10px 5px #5d3c14;
+    /* box-shadow: 0px 0px 10px 5px #5d3c14; */
     height: 550px;
   }
   main .buku:hover .desc {
@@ -414,16 +453,19 @@ footer {
   main .buku .btnRead {
     font-size: calc(1vmax + 7px);
   }
+  main .buku:hover .p1, main .buku:hover .p2 {
+    font-size: calc(1vw + 6px);
+  }
   /*main */
   /* aside */
   aside {
     width: 30vw;
     order: 3;
     align-self: start;
-    box-shadow: 5px 0 10px 5px #000;
-    border-right: 5px solid #b3a492;
-    border-top: 5px solid #b3a492;
-    border-bottom: 5px solid #b3a492;
+    box-shadow: 0px 0 10px 2px #000;
+    /* border-right: 5px solid #b3a492; */
+    /* border-top: 5px solid #b3a492; */
+    /* border-bottom: 5px solid #b3a492; */
     box-sizing: border-box;
     top: 50px;
   }
@@ -441,5 +483,10 @@ footer {
     font-size: calc(1vw + 5px);
   }
   /* aside */
+  /* footer */
+  footer h2 {
+    font-size: calc(1vw + 13px);
+  }
+  /* footer */
 }
 /* breakpoint */
