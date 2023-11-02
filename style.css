@@ -141,7 +141,6 @@ body {
 
 header,
 main,
-aside,
 footer {
   width: 100vw;
 }
@@ -173,7 +172,7 @@ main {
   order: 3;
   position: relative;
 }
-main h3 {
+main article h3 {
   font-size: 4vw;
   margin: 50px 0 0px 0px;
   padding: 10px;
@@ -184,9 +183,9 @@ main h3 {
   color: #000;
   border: 2px solid transparent;
 }
-main .populer,
-main .rating,
-main .new {
+main article .populer,
+main article .rating,
+main article .new {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -195,7 +194,7 @@ main .new {
   position: relative;
 }
 
-main .buku {
+main article .buku {
   width: 30%;
   margin-bottom: 10px;
   border: 5px solid #9dbdba;
@@ -204,10 +203,10 @@ main .buku {
   transition: 400ms;
   position: relative;
 }
-main .buku img {
+main article .buku img {
   width: 100%;
 }
-main .desc {
+main article .desc {
   display: flex;
   place-content: center;
   place-items: center;
@@ -215,18 +214,18 @@ main .desc {
   transition: 400ms;
   position: absolute;
 }
-main .desc .p1 {
+main article .desc .p1 {
   text-align: center;
   font-size: calc(1vw + 7px);
   font-weight: bold;
   margin: 5px;
 }
-main .desc .p2 {
+main article .desc .p2 {
   text-align: center;
   font-size: calc(1vw + 9px);
   padding: 0 5px 0 5px;
 }
-main .buku .btnRead {
+main article .buku .btnRead {
   position: absolute;
   padding: 5px 0 5px 0;
   background-color: #9dbdba;
@@ -236,24 +235,24 @@ main .buku .btnRead {
   transition: 2s;
   font-size: 3vw;
 }
-main .buku:hover {
+main article .buku:hover {
   box-shadow: 0px 0px 10px 5px #9dbdba;
   height: 400px;
 }
-main .buku:hover .desc {
+main article .buku:hover .desc {
   background-color: #9dbdbab5;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
-main .buku:hover .p2,
-main .buku:hover .p1 {
+main article .buku:hover .p2,
+main article .buku:hover .p1 {
   text-shadow: 0px 0px 9px #000;
   color: #fff;
   font-size: calc(1vw + 8px);
 }
-main .buku:hover .btnRead {
+main article .buku:hover .btnRead {
   z-index: 99;
   bottom: 0;
   left: 0;
@@ -263,7 +262,7 @@ main .buku:hover .btnRead {
 }
 /* main */
 /* aside */
-aside {
+main aside {
   order: 2;
   box-sizing: border-box;
   display: flex;
@@ -273,7 +272,7 @@ aside {
   padding-bottom: 15px;
   position: relative;
 }
-aside h3 {
+main aside h3 {
   font-size: calc(3vw + 9px);
   padding: 10px;
   text-align: center;
@@ -286,19 +285,19 @@ aside h3 {
   color: #000;
   margin-bottom: 10px;
 }
-aside .ptw {
+main aside .ptw {
   width: 100%;
   display: flex;
   place-content: center;
   place-items: center;
 }
-aside img {
+main aside img {
   width: 50%;
   border-top: 5px solid #9dbdba;
   border-right: 5px solid #9dbdba;
   border-left: 5px solid #9dbdba;
 }
-aside .desc {
+main aside .desc {
   display: flex;
   place-content: center;
   place-items: center;
@@ -309,13 +308,13 @@ aside .desc {
   border-right: 5px solid #9dbdba;
   border-left: 5px solid #9dbdba;
 }
-aside .desc .p1 {
+main aside .desc .p1 {
   text-align: center;
   font-size: calc(2vw + 5px);
   font-weight: bold;
   margin: 10px;
 }
-aside .desc .p2 {
+main aside .desc .p2 {
   text-align: center;
   font-size: calc(2vw + 6px);
 }
@@ -358,41 +357,42 @@ footer h2 {
   /* header */
 
   /* main */
-  main .buku {
+  main article .buku {
     height: 400px;
   }
-  main h3 {
+  main article h3 {
     font-size: calc(3vw + 8px);
     padding-left: 15px;
   }
-  main .desc .p1 {
+  main article .desc .p1 {
     font-size: calc(1vw + 7px);
   }
-  main .desc .p2 {
+  main article .desc .p2 {
     font-size: calc(1vmax + 7px);
   }
 
-  main .buku:hover {
+  main article .buku:hover {
     height: 500px;
   }
-  main .buku:hover .desc {
+  main article .buku:hover .desc {
     height: 100%;
   }
-  main .buku:hover .p1, main .buku:hover .p2 {
+  main article .buku:hover .p1,
+  main article .buku:hover .p2 {
     font-size: calc(1vmax + 10px);
   }
-  main .buku .btnRead {
+  main article .buku .btnRead {
     font-size: calc(1vmax + 7px);
   }
   /* main */
   /* aside */
-  aside h3 {
+  main aside h3 {
     font-size: calc(3vw + 8px);
   }
-  aside .desc .p1 {
+  main aside .desc .p1 {
     font-size: calc(1vw + 9px);
   }
-  aside .desc .p2 {
+  main aside .desc .p2 {
     font-size: calc(1vw + 9px);
   }
   /* aside */
@@ -404,9 +404,7 @@ footer h2 {
 }
 
 @media (min-width: 1024px) {
-  body {
-    justify-content:space-evenly;
-  }
+  
   /* header */
   header {
     margin-top: 30px;
@@ -418,68 +416,67 @@ footer h2 {
 
   /*main */
   main {
+    display: flex;
+    justify-content: space-evenly;
+margin-top: 50px;
+  }
+  main article {
     width: 65vw;
-    order: 2;
-    /* border: 5px solid #b3a492; */
     box-sizing: border-box;
     top: 50px;
     box-shadow: 0px 0 10px 2px #000;
     margin-bottom: 100px;
   }
-  main h3 {
+  main article h3 {
     font-size: calc(1vw + 10px);
     margin-top: 0px;
     margin-bottom: 0;
     padding: 7px;
   }
-  main .buku {
+  main article .buku {
     height: 400px;
     width: 22%;
   }
 
-  main .desc .p1 {
+  main article .desc .p1 {
     font-size: calc(1vw + 5px);
   }
-  main .desc .p2 {
+  main article .desc .p2 {
     font-size: calc(1vw + 5px);
   }
-  main .buku:hover {
+  main article .buku:hover {
     /* box-shadow: 0px 0px 10px 5px #5d3c14; */
     height: 550px;
   }
-  main .buku:hover .desc {
+  main article .buku:hover .desc {
     height: 100%;
   }
-  main .buku .btnRead {
+  main article .buku .btnRead {
     font-size: calc(1vmax + 7px);
   }
-  main .buku:hover .p1, main .buku:hover .p2 {
+  main article .buku:hover .p1,
+  main article .buku:hover .p2 {
     font-size: calc(1vw + 6px);
   }
   /*main */
   /* aside */
-  aside {
+  main aside {
     width: 30vw;
-    order: 3;
     align-self: start;
     box-shadow: 0px 0 10px 2px #000;
-    /* border-right: 5px solid #b3a492; */
-    /* border-top: 5px solid #b3a492; */
-    /* border-bottom: 5px solid #b3a492; */
     box-sizing: border-box;
-    top: 50px;
   }
-  aside h3 {
+  main aside h3 {
     font-size: calc(1vw + 8px);
   }
-  aside .desc,
-  aside img {
+  main aside .desc,
+  main aside img {
     width: 80%;
   }
-  aside .desc .p1 {
+  main aside .desc .p1 {
     font-size: calc(1vw + 5px);
   }
-  aside .desc .p2 {
+  main aside .desc .p2 {
     font-size: calc(1vw + 5px);
   }
   /* aside */
